@@ -1,2 +1,8 @@
-# hollyworld
-Final project for Multimedia Systems course at CEIT/AUT
+# Hollyworld
+
+This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
+
+
+## Contributes
+- Amirhossein Najafizadeh
+- Farshid Nooshi
