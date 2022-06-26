@@ -20,3 +20,10 @@ func NewConnection() (*sql.Conn, error) {
 
 	return db.Conn(context.Background())
 }
+
+// Migrate our database file
+func Migrate(conn *sql.Conn) error {
+	_, err := conn.ExecContext(context.Background(), CreateTableQuery)
+
+	return err
+}
