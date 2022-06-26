@@ -11,6 +11,7 @@ const (
 	DbFile = "./sqlite.db"
 )
 
+// NewConnection opens a connection to our sqlite file
 func NewConnection() (*sql.Conn, error) {
 	db, err := sql.Open("sqlite3", DbFile)
 	if err != nil {

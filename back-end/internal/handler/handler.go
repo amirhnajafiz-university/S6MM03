@@ -8,7 +8,7 @@ import (
 
 // Handler is our endpoint handling struct
 type Handler struct {
-	Db *sql.DB
+	Db *sql.Conn
 }
 
 // GetTopMovies returns 6 top movies
