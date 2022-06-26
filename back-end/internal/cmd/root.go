@@ -6,6 +6,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// Execute our main application
 func Execute() {
 	// creating a fiber app
 	app := fiber.New()
