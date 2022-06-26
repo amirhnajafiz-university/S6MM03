@@ -13,3 +13,8 @@ vendor/
 # my make file
 Makefile
 
+# sqlite
+sqlite.db
+
+# main
+main
