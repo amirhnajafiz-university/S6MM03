@@ -15,7 +15,7 @@ type Handler struct {
 func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 	// creating a movie type
 	type Movie struct {
-		Uid    int    `json:"uid"`
+		Uid    int    `json:"id"`
 		Title  string `json:"title"`
 		Poster string `json:"poster"`
 	}
@@ -52,7 +52,36 @@ func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 
 // GetSingleMovie returns a single movie information by id
 func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
-	return nil
+	// creating a movie type
+	type Movie struct {
+		Uid    int    `json:"id"`
+		Title  string `json:"title"`
+		Poster string `json:"poster"`
+	}
+
+	// creating our variables
+	var (
+		movie Movie
+
+		query = "SELECT * FROM movies WHERE uid=?"
+	)
+
+	// creating a prepare
+	s, _ := h.Db.Prepare(query)
+
+	// executing query
+	rows, err := s.Query(c.Query("id"))
+	if err != nil {
+		return err
+	}
+
+	// scan into movie
+	err = rows.Scan(&movie)
+	if err != nil {
+		return err
+	}
+
+	return c.JSON(movie)
 }
 
 // GetMovieFile returns a movie thriller file
