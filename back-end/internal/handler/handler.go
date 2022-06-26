@@ -86,5 +86,5 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 
 // GetMovieFile returns a movie thriller file
 func (h *Handler) GetMovieFile(c *fiber.Ctx) error {
-	return nil
+	return c.SendFile("./dash/" + c.Query("id"))
 }
