@@ -7,6 +7,7 @@ var (
         	title VARCHAR(64) NULL,
 			director VARCHAR(64) NULL,
          	score INTEGER 0,
-        	description VARCHAR(1024) NULL
+        	description VARCHAR(1024) NULL,
+			poster VARCHAR(1024) NULL
     	);`
 )
