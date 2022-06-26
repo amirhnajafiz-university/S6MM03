@@ -1,0 +1,15 @@
+# mac
+.DS_Store
+
+# goland
+.idea/
+
+# vs code
+.vs-code/
+
+# go
+vendor/
+
+# my make file
+Makefile
+
