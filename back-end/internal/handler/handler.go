@@ -2,6 +2,8 @@ package handler
 
 import (
 	"database/sql"
+	"log"
+
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -46,6 +48,8 @@ func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 
 		movies = append(movies, movie)
 	}
+
+	log.Println("GET TOP")
 
 	// close rows
 	_ = rows.Close()
@@ -98,10 +102,14 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 		}
 	}
 
+	log.Printf("GET %s\n", c.Params("id"))
+
 	return c.JSON(movie)
 }
 
 // GetMovieFile returns a movie thriller file
 func (h *Handler) GetMovieFile(c *fiber.Ctx) error {
-	return c.SendFile("./dash/" + c.Query("id"))
+	log.Printf("GET FILE %s\n", c.Params("id"))
+
+	return c.SendFile("./dash/" + c.Params("id"))
 }
