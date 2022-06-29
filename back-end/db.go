@@ -13,15 +13,21 @@ func main() {
 		log.Fatal(err)
 	}
 
+	log.Println("Created")
+
 	// making the migration
 	err = database.Migrate(d)
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	log.Println("Migrated")
+
 	// adding initialized data
 	err = database.Seed(d)
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	log.Println("Seeded")
 }
