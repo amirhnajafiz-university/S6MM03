@@ -1,0 +1,1 @@
+python-ffmpeg-video-streaming>=0.1
