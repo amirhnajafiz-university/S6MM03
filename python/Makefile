@@ -1,4 +1,4 @@
 # update codker
 d-push:
-	docker exec node-app mkdir -p /tmp/dash/$(id)
-	docker mv out node-app:/tmp/dash/$(id)
+	docker exec hollyworld mkdir -p /tmp
+	docker cp dash hollyworld:/tmp

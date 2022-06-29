@@ -7,7 +7,7 @@ import sys
 
 
 # const
-BASE = "out/"
+BASE = "dash/"
 
 # getting file name
 file_name = sys.argv[1]

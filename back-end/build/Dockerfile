@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY * ./
 
-RUN go build -o /docker-gs-ping
+RUN go build -o /docker-gs-ping main.go
 
 RUN go run db.go
 

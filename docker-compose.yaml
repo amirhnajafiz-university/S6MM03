@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   node-app:
-    container_name: node-app
+    container_name: hollyworld
     build:
       dockerfile: ./back-end/build/Dockerfile
     ports:
