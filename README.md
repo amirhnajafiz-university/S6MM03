@@ -3,7 +3,7 @@
 This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
 
 <p align="center">
-    <img src="assets/logo.png" width="700" />
+    <img src="assets/logo.png" width="300" />
 </p> 
 
 ## Back-end
