@@ -118,7 +118,7 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 func (h *Handler) GetMoviePoster(c *fiber.Ctx) error {
 	log.Printf("GET poster by ID %s\n", c.Params("id"))
 
-	return c.SendFile(path.Join(POSTER, c.Params("id")))
+	return c.SendFile(path.Join(POSTER, c.Params("id")+".png"))
 }
 
 // GetMovieFile returns a movie thriller file
