@@ -2,7 +2,6 @@ package handler
 
 import (
 	"database/sql"
-
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -36,7 +35,11 @@ func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 
 	// scan output
 	for rows.Next() {
-		er := rows.Scan(&movie)
+		er := rows.Scan(
+			&movie.Uid,
+			&movie.Title,
+			&movie.Poster,
+		)
 		if er != nil {
 			return er
 		}
@@ -54,9 +57,13 @@ func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 	// creating a movie type
 	type Movie struct {
-		Uid    int    `json:"id"`
-		Title  string `json:"title"`
-		Poster string `json:"poster"`
+		Uid         int    `json:"id"`
+		Title       string `json:"title"`
+		Director    string `json:"director"`
+		Score       int    `json:"score"`
+		Description string `json:"description"`
+		Poster      string `json:"poster"`
+		Link        string `json:"link"`
 	}
 
 	// creating our variables
@@ -70,15 +77,25 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 	s, _ := h.Db.Prepare(query)
 
 	// executing query
-	rows, err := s.Query(c.Query("id"))
+	rows, err := s.Query(c.Params("id"))
 	if err != nil {
 		return err
 	}
 
 	// scan into movie
-	err = rows.Scan(&movie)
-	if err != nil {
-		return err
+	for rows.Next() {
+		err = rows.Scan(
+			&movie.Uid,
+			&movie.Title,
+			&movie.Director,
+			&movie.Score,
+			&movie.Description,
+			&movie.Poster,
+			&movie.Link,
+		)
+		if err != nil {
+			return err
+		}
 	}
 
 	return c.JSON(movie)
