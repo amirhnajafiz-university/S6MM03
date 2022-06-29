@@ -2,6 +2,10 @@
 
 This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
 
+<p align="center">
+    <img src="assets/logo.png" width="700" />
+</p> 
+
 ## Back-end
 Start the application:
 ```shell
