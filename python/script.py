@@ -2,23 +2,25 @@
 import ffmpeg_streaming
 from ffmpeg_streaming import Formats
 
+import sys
+
 
 
 # const
-BASE = "tmp/dash/"
+BASE = "out/"
 
 # getting file name
-file_name = input("[NAME] > ")
-file_id = input("[OUTPUT ID] > ")
+file_name = sys.argv[1]
+file_id = sys.argv[2]
 
 # creating a video instance
 video = ffmpeg_streaming.input(file_name)
 
-print("Processing ...")
+print("[OK] Processing ...")
 
 # creating a dash video
 dash = video.dash(Formats.h264())
 dash.auto_generate_representations()
 dash.output(BASE + file_id + ".mpd")
 
-print("Done.")
+print("[OK] Done")
