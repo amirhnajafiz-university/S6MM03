@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  node-app:
+    container_name: node-app
+    build:
+      dockerfile: ./back-end/build/Dockerfile
+    ports:
+      - "8080:8080"
