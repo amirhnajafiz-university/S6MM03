@@ -49,8 +49,15 @@ func Seed(conn *sql.DB) error {
 		},
 	}
 
-	for movie := range movies {
-		_, err = s.Exec(movie)
+	for _, movie := range movies {
+		_, err = s.Exec(
+			movie.Title,
+			movie.Director,
+			movie.Score,
+			movie.Description,
+			movie.Poster,
+			movie.Link,
+		)
 		if err != nil {
 			return err
 		}
