@@ -23,9 +23,8 @@ type Handler struct {
 func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 	// creating a movie type
 	type Movie struct {
-		Uid    int    `json:"id"`
-		Title  string `json:"title"`
-		Poster string `json:"poster"`
+		Uid   int    `json:"id"`
+		Title string `json:"title"`
 	}
 
 	// creating our variables
@@ -33,7 +32,7 @@ func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 		movie  Movie
 		movies []Movie
 
-		query = "SELECT uid, title, poster FROM movies ORDER BY score LIMIT 6"
+		query = "SELECT uid, title FROM movies ORDER BY score LIMIT 6"
 	)
 
 	// executing database query
@@ -47,7 +46,6 @@ func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 		er := rows.Scan(
 			&movie.Uid,
 			&movie.Title,
-			&movie.Poster,
 		)
 		if er != nil {
 			return er
@@ -73,7 +71,7 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 		Director    string `json:"director"`
 		Score       int    `json:"score"`
 		Description string `json:"description"`
-		Poster      string `json:"poster"`
+		Type        string `json:"type"`
 		Link        string `json:"link"`
 	}
 
@@ -101,7 +99,7 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 			&movie.Director,
 			&movie.Score,
 			&movie.Description,
-			&movie.Poster,
+			&movie.Type,
 			&movie.Link,
 		)
 		if err != nil {

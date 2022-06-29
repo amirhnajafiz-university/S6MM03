@@ -29,7 +29,7 @@ func Seed(conn *sql.DB) error {
 		Director    string
 		Score       int
 		Description string
-		Poster      string
+		Type        string
 		Link        string
 	}
 
@@ -40,12 +40,67 @@ func Seed(conn *sql.DB) error {
 
 	movies := []Movie{
 		{
-			Title:       "test",
-			Director:    "test",
-			Score:       2,
-			Description: "test",
-			Poster:      "test",
-			Link:        "test",
+			Title:    "Doctor Strange in the Multiverse of Madness",
+			Director: "Sam Raimi",
+			Score:    7,
+			Description: "Doctor Strange teams up with a " +
+				"mysterious teenage girl from his dreams who " +
+				"can travel across multiverses, to battle multiple threats, " +
+				"including other-universe versions of himself, which threaten " +
+				"to wipe out millions across the multiverse. " +
+				"They seek help from Wanda the Scarlet Witch, Wong and others.",
+			Type: "DASH1",
+		},
+		{
+			Title:    "Obi-Wan Kenobi",
+			Director: "Deborah Chow",
+			Score:    8,
+			Description: "Jedi Master Obi-Wan Kenobi " +
+				"has to save young Leia after she is kidnapped, " +
+				"all the while being pursued by Imperial Inquisitors " +
+				"and his former Padawan, now known as Darth Vader.",
+			Type: "DASH1",
+		},
+		{
+			Title:    "Top Gun: Maverick",
+			Director: "Bob Standford",
+			Score:    9,
+			Description: "After more than thirty years of service" +
+				" as one of the Navy's top aviators, Pete" +
+				" Mitchell is where he belongs, pushing" +
+				" the envelope as a courageous test pilot" +
+				" and dodging the advancement in rank that would ground",
+			Type: "DASH2",
+			Link: "https://www.imdb.com/video/vi632472089/?ref_=tt_vi_i_1",
+		},
+		{
+			Title:    "Stranger Things",
+			Director: "Brad Richards",
+			Score:    9,
+			Description: "When a young boy disappears, his mother, " +
+				"a police chief and his friends must " +
+				"confront terrifying supernatural forces in order to get him back.",
+			Type: "DASH2",
+			Link: "https://www.imdb.com/video/vi3269313049/?ref_=ttvi_vi_imdb_1",
+		},
+		{
+			Title:    "The Boys",
+			Director: "Eric Kripke",
+			Score:    8,
+			Description: "A group of vigilantes set out to take" +
+				" down corrupt superheroes who abuse their superpowers.",
+			Type: "HLS",
+			Link: "https://www.imdb.com/video/vi2146157081/?ref_=ttvi_vi_imdb_1",
+		},
+		{
+			Title:    "The Black Phone",
+			Director: "Scott Derrickson",
+			Score:    7,
+			Description: "After being abducted by a child killer and locked in a soundproof basement, " +
+				"a 13-year-old boy starts receiving calls on " +
+				"a disconnected phone from the killer's previous victims.",
+			Type: "HLS",
+			Link: "https://www.imdb.com/video/vi3700671001/?ref_=tt_vi_i_1",
 		},
 	}
 
@@ -55,7 +110,7 @@ func Seed(conn *sql.DB) error {
 			movie.Director,
 			movie.Score,
 			movie.Description,
-			movie.Poster,
+			movie.Type,
 			movie.Link,
 		)
 		if err != nil {
