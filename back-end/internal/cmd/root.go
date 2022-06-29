@@ -28,6 +28,7 @@ func Execute() {
 	app.Get("/api/movies", h.GetTopMovies)
 	app.Get("/api/movies/:id", h.GetSingleMovie)
 	app.Get("/dash/:id", h.GetMovieFile)
+	app.Get("/poster/:id", h.GetMoviePoster)
 
 	// listening on port 8080
 	log.Fatal(app.Listen(":8080"))

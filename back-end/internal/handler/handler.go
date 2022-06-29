@@ -10,7 +10,8 @@ import (
 
 // BASE folder of Dash files
 const (
-	BASE = "/tmp/dash"
+	BASE   = "/tmp/dash"
+	POSTER = "./storage/files"
 )
 
 // Handler is our endpoint handling struct
@@ -111,6 +112,13 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 	log.Printf("GET %s\n", c.Params("id"))
 
 	return c.JSON(movie)
+}
+
+// GetMoviePoster returns the movie poster
+func (h *Handler) GetMoviePoster(c *fiber.Ctx) error {
+	log.Printf("GET poster by ID %s\n", c.Params("id"))
+
+	return c.SendFile(path.Join(POSTER, c.Params("id")))
 }
 
 // GetMovieFile returns a movie thriller file
