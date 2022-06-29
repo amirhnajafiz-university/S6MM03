@@ -18,4 +18,10 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	// adding initialized data
+	err = database.Seed(d)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
