@@ -71,7 +71,7 @@ func Seed(conn *sql.DB) error {
 				" the envelope as a courageous test pilot" +
 				" and dodging the advancement in rank that would ground",
 			Type: "DASH2",
-			Link: "https://www.imdb.com/video/vi632472089/?ref_=tt_vi_i_1",
+			Link: "https://amir-farshid.arvanvod.com/YnGp7wpPVQ/D6OvYMvJ7x/h_,144_200,240_400,360_800,480_1500,k.mp4.list/manifest.mpd",
 		},
 		{
 			Title:    "Stranger Things",
@@ -81,7 +81,7 @@ func Seed(conn *sql.DB) error {
 				"a police chief and his friends must " +
 				"confront terrifying supernatural forces in order to get him back.",
 			Type: "DASH2",
-			Link: "https://www.imdb.com/video/vi3269313049/?ref_=ttvi_vi_imdb_1",
+			Link: "https://amir-farshid.arvanvod.com/YnGp7wpPVQ/La61Pn75Y9/h_,144_200,240_400,360_800,480_1483,k.mp4.list/manifest.mpd",
 		},
 		{
 			Title:    "The Boys",
@@ -90,7 +90,7 @@ func Seed(conn *sql.DB) error {
 			Description: "A group of vigilantes set out to take" +
 				" down corrupt superheroes who abuse their superpowers.",
 			Type: "HLS",
-			Link: "https://www.imdb.com/video/vi2146157081/?ref_=ttvi_vi_imdb_1",
+			Link: "https://amir-farshid.arvanvod.com/YnGp7wpPVQ/vL3zBRzqmP/h_,144_200,240_400,k.mp4.list/master.m3u8",
 		},
 		{
 			Title:    "The Black Phone",
@@ -100,7 +100,7 @@ func Seed(conn *sql.DB) error {
 				"a 13-year-old boy starts receiving calls on " +
 				"a disconnected phone from the killer's previous victims.",
 			Type: "HLS",
-			Link: "https://www.imdb.com/video/vi3700671001/?ref_=tt_vi_i_1",
+			Link: "https://amir-farshid.arvanvod.com/YnGp7wpPVQ/KBbv76jDAG/h_,144_200,240_400,360_800,480_1500,k.mp4.list/master.m3u8",
 		},
 	}
 

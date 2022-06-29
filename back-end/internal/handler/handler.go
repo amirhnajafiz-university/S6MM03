@@ -123,5 +123,5 @@ func (h *Handler) GetMoviePoster(c *fiber.Ctx) error {
 func (h *Handler) GetMovieFile(c *fiber.Ctx) error {
 	log.Printf("GET file by ID %s\n", c.Params("id"))
 
-	return c.SendFile(path.Join(BASE, c.Params("id")))
+	return c.SendFile(path.Join(BASE, c.Params("id")+".mpd"))
 }
