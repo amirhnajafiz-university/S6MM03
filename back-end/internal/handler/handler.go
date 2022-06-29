@@ -3,8 +3,14 @@ package handler
 import (
 	"database/sql"
 	"log"
+	"path"
 
 	"github.com/gofiber/fiber/v2"
+)
+
+// BASE folder of Dash files
+const (
+	BASE = "/tmp/dash"
 )
 
 // Handler is our endpoint handling struct
@@ -109,7 +115,7 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 
 // GetMovieFile returns a movie thriller file
 func (h *Handler) GetMovieFile(c *fiber.Ctx) error {
-	log.Printf("GET FILE %s\n", c.Params("id"))
+	log.Printf("GET file by ID %s\n", c.Params("id"))
 
-	return c.SendFile("./dash/" + c.Params("id"))
+	return c.SendFile(path.Join(BASE, c.Params("id")))
 }
