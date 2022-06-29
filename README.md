@@ -3,6 +3,11 @@
 This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
 
 ## Back-end
+Start the application:
+```shell
+docker compose up -d
+```
+
 ### Endpoints
 - :8080/api/movies
   - Get top 6 movies
@@ -16,12 +21,25 @@ This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
 ### Responses
 All movies response:
 ```json
-
+[
+  {
+    "id": 1,
+    "title": "title",
+  },
+]
 ```
 
 A single movie response:
 ```json
-
+{
+  "id": 1,
+  "title": "title",
+  "director": "director",
+  "score": 10,
+  "description": "something",
+  "type": "DASH1/DASH2/HLS",
+  "link": "https://link"
+}
 ```
 
 ## Python
