@@ -1,3 +1,7 @@
+<div align="center">
+    <h1>In The Name Of GOD</h1>    
+</div>
+
 # Hollyworld
 
 This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
