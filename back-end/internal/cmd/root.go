@@ -13,6 +13,9 @@ func Execute() {
 	// creating a fiber app
 	app := fiber.New()
 
+    app.Use(cors.New(cors.Config{
+        AllowOrigins: "*"
+    }))
 	// creating a database connection
 	d, err := database.NewConnection()
 	if err != nil {
