@@ -35,6 +35,9 @@ func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 		query = "SELECT uid, title FROM movies ORDER BY score LIMIT 6"
 	)
 
+	// set cors policy
+	c.Set("Access-Control-Allow-Origin", "*")
+
 	// executing database query
 	rows, err := h.Db.Query(query)
 	if err != nil {
@@ -82,6 +85,9 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 		query = "SELECT * FROM movies WHERE uid=?"
 	)
 
+	// set cors policy
+	c.Set("Access-Control-Allow-Origin", "*")
+
 	// creating a prepare
 	s, _ := h.Db.Prepare(query)
 
@@ -114,6 +120,9 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 
 // GetMoviePoster returns the movie poster
 func (h *Handler) GetMoviePoster(c *fiber.Ctx) error {
+	// set cors policy
+	c.Set("Access-Control-Allow-Origin", "*")
+
 	log.Printf("GET poster by ID %s\n", c.Params("id"))
 
 	return c.SendFile(path.Join(POSTER, c.Params("id")+".png"))
@@ -121,6 +130,9 @@ func (h *Handler) GetMoviePoster(c *fiber.Ctx) error {
 
 // GetMovieFile returns a movie thriller file
 func (h *Handler) GetMovieFile(c *fiber.Ctx) error {
+	// set cors policy
+	c.Set("Access-Control-Allow-Origin", "*")
+
 	log.Printf("GET file by ID %s\n", c.Params("id"))
 
 	return c.SendFile(path.Join(BASE, c.Params("id")+".mpd"))
