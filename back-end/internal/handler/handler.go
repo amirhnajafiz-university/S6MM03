@@ -36,7 +36,7 @@ func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 	)
 
 	// set cors policy
-	c.Set("Access-Control-Allow-Origin", "*")
+	c.Set("Access-Control-Allow-Origin", "localhost")
 	c.Set("Content-Type", "application/json")
 
 	// executing database query
