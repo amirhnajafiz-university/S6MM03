@@ -17,6 +17,9 @@ app.controller('myCtrl', ['$scope', function ($scope) {
 
         $scope.movies2 = JSON.parse('[{"id":1,"title":"Doctor Strange in the Multiverse of Madness"},{"id":6,"title":"The Black Phone"},{"id":2,"title":"Obi-Wan Kenobi"},{"id":5,"title":"The Boys"},{"id":3,"title":"Top Gun: Maverick"},{"id":4,"title":"Stranger Things"}]')
         $scope.count = 0;
+        $scope.movies2.forEach(function (value, i) {
+            $scope.movies2[i].posterURL = 'localhost:8080/dash/' + value.id
+        });
         $scope.myClick = function () {
             $scope.count++;
         };
