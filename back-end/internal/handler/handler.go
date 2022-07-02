@@ -37,6 +37,7 @@ func (h *Handler) GetTopMovies(c *fiber.Ctx) error {
 
 	// set cors policy
 	c.Set("Access-Control-Allow-Origin", "*")
+	c.Set("Content-Type", "application/json")
 
 	// executing database query
 	rows, err := h.Db.Query(query)
@@ -87,6 +88,7 @@ func (h *Handler) GetSingleMovie(c *fiber.Ctx) error {
 
 	// set cors policy
 	c.Set("Access-Control-Allow-Origin", "*")
+	c.Set("Content-Type", "application/json")
 
 	// creating a prepare
 	s, _ := h.Db.Prepare(query)
