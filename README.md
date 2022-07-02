@@ -2,19 +2,24 @@
     <h1>In The Name Of GOD</h1>    
 </div>
 
-# Hollyworld
-
-This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
-
 <p align="center">
     <img src="assets/logo.png" width="300" />
 </p> 
+
+This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
 
 ## Application
 Start the application:
 ```shell
 chmod +x setup.sh 
 ./setup.sh
+```
+
+### Front-end
+Start front-end application:
+```shell
+cd front-end
+npm start
 ```
 
 ### Endpoints
