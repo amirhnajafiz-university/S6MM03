@@ -1,31 +1,31 @@
-<!--<div class="modal-header" align="center">-->
-<!--    <h1>Holly WORLD</h1>-->
-<!--</div>-->
+<div class="modal-body width">
+    <div class="group-control">
 
-<!--<div class="modal-body width">-->
-<!--    <div class="group-control">-->
-
-<!--        <div class="row">-->
-<!--            <div class="d-grid gap-2 d-md-block">-->
-<!--                <button ng-click="myClick()" class="form-control">show</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <hr>-->
-
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col" ng-repeat="s in movies2">
-                <div class="card">
-                    <img src={{s.posterURL}} class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="#/movies/{{s.id}}">{{s.id}}</a>.{{s.title}}</h5>
-<!--                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in-->
-<!--                            to additional content. This content is a little bit longer.</p>-->
-                    </div>
-                </div>
+        <div class="row">
+            <div class="d-grid gap-2 d-md-block">
+                <button ng-click="myClick()" class="form-control btn btn-primary" id="swapper">show</button>
             </div>
         </div>
+        <hr>
 
-<!--    </div>-->
-<!--</div>-->
+<div class="container" id="contents">
+    <div class="row g-3">
+        <div class="col-3" ng-repeat="s in movies2">
+            <div class="card">
+                <a class="link-dark text-decoration-none" href="#/movies/{{s.id}}">
+                <img src="http://localhost:8080/poster/{{s.id}}" class="card-img-top" width="150px"
+                     height="200px">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{s.id}}. {{s.title}}</h5>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
 
 
