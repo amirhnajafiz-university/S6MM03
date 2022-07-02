@@ -1,0 +1,55 @@
+<div class="modal-header" align="center">
+    <h1>Holly WORLD</h1>
+</div>
+
+<div class="modal-body width">
+    <div class="group-control">
+
+        <div class="row">
+            <div class="d-grid gap-1">
+                <button ng-click="myClick()" class="form-control">show</button>
+            </div>
+        </div>
+        <hr>
+
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Score</th>
+                <th>Description</th>
+                <th>type</th>
+                <th>link</th>
+            </tr>
+            </thead>
+
+            <tr ng-repeat="s in movieInfo">
+                <td><a href="#/movies/{{s.id}}">{{s.id}}</a>
+                </td>
+                <td>{{s.title}}
+                </td>
+                <td>{{s.director}}
+                </td>
+                <td>{{s.score}}
+                </td>
+                <td>{{s.description}}
+                </td>
+                <td>{{s.type}}
+                </td>
+                <td>{{s.link}}
+                </td>
+            </tr>
+        </table>
+
+        <div>
+            <video data-dashjs-player autoplay src={{movies2.dash}} controls>
+            </video>
+        </div>
+        <script src="http://cdn.dashjs.org/v3.1.0/dash.all.min.js"></script>
+
+
+    </div>
+</div>
