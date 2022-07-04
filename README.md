@@ -10,14 +10,14 @@ This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
 
 ## Application
 Start the application:
-```shell
+```console
 chmod +x setup.sh 
 ./setup.sh
 ```
 
 ### Front-end
 Start front-end application:
-```shell
+```console
 cd front-end
 npm start
 ```
