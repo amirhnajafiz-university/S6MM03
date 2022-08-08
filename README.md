@@ -58,5 +58,5 @@ A single movie response:
 
 ## Contributes
 - Amirhossein Najafizadeh
-- Farshid Nooshi
+- [Farshid Nooshi](https://ce.aut.ac.ir/~Farshid_Nooshi/)
 
