@@ -7,6 +7,14 @@
 </p> 
 
 This is our final project for **Multimedia Systems** course at _CEIT/AUT_.
+This Project was for building an IMDB website clone using **Docker, Dash Protocol for streaming online and chunking data, Angular Framework for Frontend, SQLite for Database and GoLang for Backend**
+
+for Chunking Data and streaming online we used Dash Protocol and Python FFmpeg Video Streaming Library.
+#### Approaches for online streaming
+* **plain VoD** for streaming videos 
+* implementation of our own backend server for **Dash protocol**
+* using **HLS protocol and VoD**
+
 
 ## Application
 Start the application:
