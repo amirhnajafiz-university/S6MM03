@@ -66,5 +66,5 @@ A single movie response:
 
 ## Contributes
 - Amirhossein Najafizadeh
-- [Farshid Nooshi](https://ce.aut.ac.ir/~Farshid_Nooshi/)
+- [Farshid Nooshi](https://farshidnooshi.github.io)
 
