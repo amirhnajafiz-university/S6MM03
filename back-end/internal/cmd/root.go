@@ -1,13 +1,13 @@
 package cmd
 
 import (
-	"github.com/gofiber/fiber/v2/middleware/cors"
 	"log"
 
 	"github.com/amirhnajafiz/S6MM03/back-end/internal/database"
 	"github.com/amirhnajafiz/S6MM03/back-end/internal/handler"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 // Execute our main application
