@@ -1,6 +1,8 @@
 package main
 
-import "github.com/amirhnajafiz/hollyworld/back-end/internal/cmd"
+import (
+	"github.com/amirhnajafiz/S6MM03/back-end/internal/cmd"
+)
 
 func main() {
 	cmd.Execute()

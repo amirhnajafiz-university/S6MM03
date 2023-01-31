@@ -3,8 +3,9 @@ package cmd
 import (
 	"log"
 
-	"github.com/amirhnajafiz/hollyworld/back-end/internal/database"
-	"github.com/amirhnajafiz/hollyworld/back-end/internal/handler"
+	"github.com/amirhnajafiz/S6MM03/back-end/internal/database"
+	"github.com/amirhnajafiz/S6MM03/back-end/internal/handler"
+
 	"github.com/gofiber/fiber/v2"
 )
 
