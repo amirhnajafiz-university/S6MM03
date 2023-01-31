@@ -18,14 +18,14 @@ for Chunking Data and streaming online we used Dash Protocol and Python FFmpeg V
 
 ## Application
 Start the application:
-```shell
+```console
 chmod +x setup.sh 
 ./setup.sh
 ```
 
 ### Front-end
 Start front-end application:
-```shell
+```console
 cd front-end
 npm start
 ```
