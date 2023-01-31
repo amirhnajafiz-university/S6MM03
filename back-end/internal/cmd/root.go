@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"log"
 
 	"github.com/amirhnajafiz/S6MM03/back-end/internal/database"
@@ -13,6 +14,8 @@ import (
 func Execute() {
 	// creating a fiber app
 	app := fiber.New()
+	// adding a cors middleware
+	app.Use(cors.New())
 
 	// creating a database connection
 	d, err := database.NewConnection()
